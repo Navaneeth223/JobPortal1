@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --app-bg: #0a0f1f;
+  --app-gradient: radial-gradient(
+      circle at top,
+      rgba(59, 130, 246, 0.15),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(99, 102, 241, 0.15),
+      transparent 40%
+    );
+  --sidebar-bg: #0b1224;
+  --surface: rgba(5, 6, 10, 0.75);
+  --surface-soft: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e8edf7;
+  --muted: rgba(232, 237, 247, 0.6);
+  --muted-strong: rgba(232, 237, 247, 0.75);
+  --pill: rgba(255, 255, 255, 0.1);
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #0b0f1f;
+  --btn-primary-hover: #f3f4f6;
+  --accent-bg: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.45),
+    rgba(126, 34, 206, 0.45)
+  );
+  --accent-border: rgba(129, 140, 248, 0.35);
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  --warning-border: rgba(245, 158, 11, 0.3);
+  --warning-text: #fde68a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background: var(--app-bg);
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --app-bg: #f5f7fb;
+  --app-gradient: radial-gradient(
+      circle at top,
+      rgba(59, 130, 246, 0.15),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(168, 85, 247, 0.15),
+      transparent 40%
+    );
+  --sidebar-bg: #f0f2f8;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-soft: rgba(15, 23, 42, 0.06);
+  --border: rgba(15, 23, 42, 0.12);
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.6);
+  --muted-strong: rgba(15, 23, 42, 0.75);
+  --pill: rgba(15, 23, 42, 0.08);
+  --btn-primary-bg: #0f172a;
+  --btn-primary-text: #f8fafc;
+  --btn-primary-hover: #111827;
+  --accent-bg: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.18),
+    rgba(168, 85, 247, 0.2)
+  );
+  --accent-border: rgba(99, 102, 241, 0.25);
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  --warning-border: rgba(245, 158, 11, 0.35);
+  --warning-text: #92400e;
+}
+
+.app-shell {
+  background: var(--app-bg);
+  color: var(--text);
+}
+
+.app-gradient {
+  background: var(--app-gradient);
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  border-color: var(--border);
+}
+
+.card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.card-soft {
+  background: var(--surface-soft);
+  border-color: var(--border);
+}
+
+.card-accent {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-muted-strong {
+  color: var(--muted-strong);
+}
+
+.pill {
+  background: var(--pill);
+  color: var(--muted-strong);
+}
+
+.btn-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+  background: var(--btn-primary-hover);
+}
+
+.btn-ghost {
+  background: var(--surface-soft);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  background: var(--pill);
+}
+
+.input-field {
+  background: var(--surface-soft);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.input-field::placeholder {
+  color: var(--muted);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.warning {
+  background: var(--warning-bg);
+  border-color: var(--warning-border);
+}
+
+.warning-icon {
+  background: var(--warning-border);
+  color: var(--warning-text);
+}
