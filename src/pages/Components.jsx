@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   Clock,
@@ -7,6 +8,7 @@ import {
 } from "lucide-react";
 
 const Components = () => {
+  const navigate = useNavigate();
   return (
     <div className="space-y-6">
       <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -19,7 +21,7 @@ const Components = () => {
             Manage and track candidate applications
           </p>
         </div>
-        <button className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm transition btn-ghost">
+        <button onClick={() => navigate("/")} className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm transition btn-ghost">
           <ArrowLeft className="h-4 w-4" />
           Dashboard
         </button>
